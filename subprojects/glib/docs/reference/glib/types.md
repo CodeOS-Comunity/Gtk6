@@ -1,5 +1,5 @@
 Title: Basic Types
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 1999 Owen Taylor
 SPDX-FileCopyrightText: 2000 Red Hat, Inc.
 SPDX-FileCopyrightText: 2000 Sebastian Wilhelmi

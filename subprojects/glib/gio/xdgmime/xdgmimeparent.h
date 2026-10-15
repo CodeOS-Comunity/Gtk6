@@ -6,7 +6,7 @@
  * Copyright (C) 2004  Red Hat, Inc.
  * Copyright (C) 200  Matthias Clasen <mclasen@redhat.com>
  *
- * SPDX-License-Identifier: LGPL-2.1-or-later or AFL-2.0
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifndef __XDG_MIME_PARENT_H__

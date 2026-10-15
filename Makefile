@@ -14,9 +14,10 @@
 
 HERE := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
-# Qt6 sysroot (shared with qt6/).  Overridable so the tree can be built from a
-# different checkout order.
-QTDIR        ?= $(abspath $(HERE)/../qt6/sysroot/usr)
+# Qt6 sysroot (shared with the top-level qt6/).  This package lives at
+# pkgs/core/gtk6, so the repo root is three levels up.  Overridable so the tree
+# can be built from a different checkout order.
+QTDIR        ?= $(abspath $(HERE)/../../../qt6/sysroot/usr)
 GLIB_SYSROOT ?= $(HERE)/sysroot/usr
 GLIB_BUILD   ?= $(HERE)/build/glib
 

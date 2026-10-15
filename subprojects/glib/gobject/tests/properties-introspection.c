@@ -1,7 +1,7 @@
 /* properties-introspection.c: Test the properties introspection API
  *
  * SPDX-FileCopyrightText: 2023 Emmanuele Bassi
- * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 /* This test is isolated so we can control the initialization of

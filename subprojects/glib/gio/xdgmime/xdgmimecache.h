@@ -5,7 +5,7 @@
  *
  * Copyright (C) 2005  Matthias Clasen <mclasen@redhat.com>
  *
- * SPDX-License-Identifier: LGPL-2.1-or-later or AFL-2.0
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifndef __XDG_MIME_CACHE_H__

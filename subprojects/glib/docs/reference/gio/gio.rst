@@ -13,7 +13,7 @@
    SPDX-FileCopyrightText: 2018 segfault
    SPDX-FileCopyrightText: 2020 Frederic Martinsons
    SPDX-FileCopyrightText: 2022 Marco Trevisan
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ===
 gio

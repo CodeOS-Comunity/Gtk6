@@ -1,5 +1,5 @@
 Title: Data Structures
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2010 Allison Lortie
 SPDX-FileCopyrightText: 2011 Collabora, Ltd.
 SPDX-FileCopyrightText: 2012 Olivier Sessink

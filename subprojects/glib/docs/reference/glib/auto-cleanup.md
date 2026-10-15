@@ -1,5 +1,5 @@
 Title: Automatic Cleanup
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2023 Matthias Clasen
 
 # Automatic Cleanup

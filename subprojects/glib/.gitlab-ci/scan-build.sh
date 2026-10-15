@@ -2,7 +2,7 @@
 #
 # Copyright 2024 GNOME Foundation, Inc.
 #
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Original author: Philip Withnall
 

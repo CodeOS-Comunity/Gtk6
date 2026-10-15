@@ -1,5 +1,5 @@
 Title: Simple XML Subset Parser
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2011, 2014 Matthias Clasen
 SPDX-FileCopyrightText: 2012 David King
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Copyright 2016-2018 Simon McVittie
 # Copyright 2018-2024 Collabora Ltd.
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 set -eu
 

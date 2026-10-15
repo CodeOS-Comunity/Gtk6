@@ -1,5 +1,5 @@
 Title: Content Types
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2006, 2007 Red Hat, Inc.
 SPDX-FileCopyrightText: 2007 Alexander Larsson
 

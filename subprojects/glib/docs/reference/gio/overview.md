@@ -1,5 +1,5 @@
 Title: Overview
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2007, 2008, 2010, 2011, 2012, 2013 Matthias Clasen
 SPDX-FileCopyrightText: 2007, 2009 Alexander Larsson
 SPDX-FileCopyrightText: 2008 A. Walton

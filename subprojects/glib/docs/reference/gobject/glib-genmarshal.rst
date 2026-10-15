@@ -13,7 +13,7 @@
    SPDX-FileCopyrightText: 2010 Christian Persch
    SPDX-FileCopyrightText: 2017, 2019, 2020 Emmanuele Bassi
    SPDX-FileCopyrightText: 2020 Centricular
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ===============
 glib-genmarshal

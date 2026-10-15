@@ -17,7 +17,7 @@
    SPDX-FileCopyrightText: 2017, 2019, 2022 Emmanuele Bassi
    SPDX-FileCopyrightText: 2018, 2020 Centricular
    SPDX-FileCopyrightText: 2020 Aleksander Morgado
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ============
 glib-mkenums

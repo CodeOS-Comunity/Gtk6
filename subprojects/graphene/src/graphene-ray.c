@@ -1,6 +1,6 @@
 /* graphene-ray.c: A ray emitted from an origin in a given direction
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2015  Emmanuele Bassi
  *

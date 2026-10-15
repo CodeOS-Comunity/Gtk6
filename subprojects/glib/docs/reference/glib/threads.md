@@ -1,5 +1,5 @@
 Title: Threads
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2010 Allison Lortie
 SPDX-FileCopyrightText: 2011, 2012, 2014 Matthias Clasen
 SPDX-FileCopyrightText: 2014 Collabora, Ltd.

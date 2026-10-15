@@ -5,7 +5,7 @@
 ..
    This has to be duplicated from above to make it machine-readable by `reuse`:
    SPDX-FileCopyrightText: 2007 Allison Karlitskaya
-   SPDX-License-Identifier: CC-BY-SA-3.0
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ==========================
 GVariant Specification 1.0

@@ -11,7 +11,7 @@
    SPDX-FileCopyrightText: 2011 Colin Walters
    SPDX-FileCopyrightText: 2016 Jeremy Whiting
    SPDX-FileCopyrightText: 2018 Arnaud Bonatti
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 =========
 gsettings

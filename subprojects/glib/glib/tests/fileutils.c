@@ -1,7 +1,7 @@
 /* Unit tests for gfileutils
  * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
  *
- * SPDX-License-Identifier: LicenseRef-old-glib-tests
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This work is provided "as is"; redistribution and modification
  * in whole or in part, in any medium, physical or electronic is

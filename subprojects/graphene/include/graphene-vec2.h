@@ -1,6 +1,6 @@
 /* graphene-vec2.h: 2-coords vector
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

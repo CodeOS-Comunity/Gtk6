@@ -1,6 +1,6 @@
 /* graphene-size.h: Size
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

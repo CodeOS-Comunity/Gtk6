@@ -1,7 +1,7 @@
 /*
  * Copyright 2018 LLVM contributors
  *
- * SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
  * See https://llvm.org/LICENSE.txt for license information.

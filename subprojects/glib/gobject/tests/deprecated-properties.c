@@ -1,6 +1,6 @@
 /*
  * Copyright 2022 Simon McVittie
- * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #include <glib-object.h>

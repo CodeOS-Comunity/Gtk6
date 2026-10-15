@@ -1,6 +1,6 @@
 /* graphene-rect.h: Rectangular type
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

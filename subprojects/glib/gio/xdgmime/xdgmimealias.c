@@ -6,7 +6,7 @@
  * Copyright (C) 2004  Red Hat, Inc.
  * Copyright (C) 2004  Matthias Clasen <mclasen@redhat.com>
  *
- * SPDX-License-Identifier: LGPL-2.1-or-later or AFL-2.0
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H

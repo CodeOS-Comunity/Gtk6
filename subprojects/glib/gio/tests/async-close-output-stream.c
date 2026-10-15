@@ -1,7 +1,7 @@
 /* GLib testing framework examples and tests
  * Authors: Jesse van den Kieboom <jessevdk@gnome.org>
  *
- * SPDX-License-Identifier: LicenseRef-old-glib-tests
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This work is provided "as is"; redistribution and modification
  * in whole or in part, in any medium, physical or electronic is

@@ -2,7 +2,7 @@
  * Copyright (C) 2009 Red Hat, Inc.
  * Authors: Alexander Larsson <alexl@redhat.com>
  *
- * SPDX-License-Identifier: LicenseRef-old-glib-tests
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This work is provided "as is"; redistribution and modification
  * in whole or in part, in any medium, physical or electronic is

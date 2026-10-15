@@ -2,7 +2,7 @@
 
 # Copyright (C) 2024 Red Hat, Inc.
 #
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 # Run ./build/gobject/tests/performance/performance for several commits
 # and compare the result.

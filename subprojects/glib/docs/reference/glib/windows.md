@@ -1,5 +1,5 @@
 Title: Windows-specific Utilities
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2005 Ross Burton
 
 # Windows-specific Utilities

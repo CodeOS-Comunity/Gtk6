@@ -7,7 +7,7 @@
    This has to be duplicated from above to make it machine-readable by `reuse`:
    SPDX-FileCopyrightText: 2003 Matthias Clasen
    SPDX-FileCopyrightText: 2012 Red Hat, Inc.
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ===============
 glib-gettextize

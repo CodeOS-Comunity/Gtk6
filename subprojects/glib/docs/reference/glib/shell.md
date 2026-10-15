@@ -1,5 +1,5 @@
 Title: Shell Utilities
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2014 Matthias Clasen
 
 # Shell Utilities

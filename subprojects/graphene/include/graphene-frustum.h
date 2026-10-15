@@ -1,6 +1,6 @@
 /* graphene-frustum.h: A 3D field of view
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

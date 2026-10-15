@@ -2,7 +2,7 @@
 # Copyright (C) 1998, 1999 Tom Tromey
 # Copyright (C) 2001 Red Hat Software
 #
-# SPDX-License-Identifier: GPL-2.0-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

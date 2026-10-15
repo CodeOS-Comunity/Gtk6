@@ -1,7 +1,7 @@
 /* Unit tests for GPathBuf
  *
  * SPDX-FileCopyrightText: 2023  Emmanuele Bassi
- * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #include "config.h"

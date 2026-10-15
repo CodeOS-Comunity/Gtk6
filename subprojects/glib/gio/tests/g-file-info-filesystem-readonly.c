@@ -1,7 +1,7 @@
 /* Testcase for bug in GIO function g_file_query_filesystem_info()
  * Author: Nelson Benítez León
  *
- * SPDX-License-Identifier: LicenseRef-old-glib-tests
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This work is provided "as is"; redistribution and modification
  * in whole or in part, in any medium, physical or electronic is

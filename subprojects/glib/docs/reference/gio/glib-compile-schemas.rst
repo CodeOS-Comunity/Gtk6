@@ -9,7 +9,7 @@
    SPDX-FileCopyrightText: 2010, 2011, 2012, 2015 Red Hat, Inc.
    SPDX-FileCopyrightText: 2012 Allison Karlitskaya
    SPDX-FileCopyrightText: 2016 Sam Thursfield
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 ====================
 glib-compile-schemas

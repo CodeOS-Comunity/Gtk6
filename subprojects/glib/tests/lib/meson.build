@@ -1,6 +1,6 @@
 # Copyright 2024 Collabora Ltd.
 # Copyright 2025 Simon McVittie
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 if installed_tests_enabled
   install_data(

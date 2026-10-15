@@ -1,5 +1,5 @@
 Title: Migrating from GConf to GSettings
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2010, 2012 Matthias Clasen
 SPDX-FileCopyrightText: 2010 Allison Lortie
 SPDX-FileCopyrightText: 2011 Ray Strode

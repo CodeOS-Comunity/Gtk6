@@ -9,7 +9,7 @@
    SPDX-FileCopyrightText: 2010, 2011, 2012, 2020 Red Hat, Inc.
    SPDX-FileCopyrightText: 2015 Collabora, Ltd.
    SPDX-FileCopyrightText: 2021 Endless OS Foundation, LLC
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 =====
 gdbus

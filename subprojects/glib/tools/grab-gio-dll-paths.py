@@ -2,7 +2,7 @@
 #
 # Copyright © 2024 Chun-wei Fan.
 #
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Original author: Chun-wei Fan <fanc999@yahoo.com.tw>
 

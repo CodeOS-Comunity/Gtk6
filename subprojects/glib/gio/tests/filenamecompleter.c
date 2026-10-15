@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2025 Khalid Abu Shawarib.
  *
- * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Author: Khalid Abu Shawarib <kas@gnome.org>
  */

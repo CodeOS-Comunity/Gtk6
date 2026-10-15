@@ -1,6 +1,6 @@
 /* graphene-point3d.c: Point in 3D space
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

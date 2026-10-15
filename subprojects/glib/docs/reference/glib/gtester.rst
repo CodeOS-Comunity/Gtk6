@@ -13,7 +13,7 @@
    SPDX-FileCopyrightText: 2011 Carlos Garcia Campos
    SPDX-FileCopyrightText: 2012 Red Hat, Inc.
    SPDX-FileCopyrightText: 2019 Endless Mobile, Inc.
-   SPDX-License-Identifier: LGPL-2.1-or-later
+   SPDX-License-Identifier: GPL-3.0-or-later
 
 =======
 gtester

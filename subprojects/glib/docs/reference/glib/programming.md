@@ -1,5 +1,5 @@
 Title: Writing GLib Applications
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2012 Red Hat, Inc.
 SPDX-FileCopyrightText: 2023 Endless OS Foundation, LLC
 

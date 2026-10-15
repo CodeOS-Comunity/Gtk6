@@ -2,19 +2,19 @@
  *
  * Copyright (C) 2007  Emmanuele Bassi  <ebassi@gnome.org>
  *
- * SPDX-License-Identifier: LGPL-2.1-or-later
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
+ * modify it under the terms of the GNU General Public
  * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
+ * version 3 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ * General Public License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public License
+ * You should have received a copy of the GNU General Public License
  * along with this library; if not, see <http://www.gnu.org/licenses/>.
  */
 
@@ -819,7 +819,7 @@ sha1_sum_digest (Sha1sum *sha1,
 /* adapted from the SHA256 implementation in gsk/src/hash/gskhash.c.
  *
  * Copyright (C) 2006 Dave Benson
- * Released under the terms of the GNU Lesser General Public License
+ * Released under the terms of the GNU General Public License
  */
 
 static void

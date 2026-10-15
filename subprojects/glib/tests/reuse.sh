@@ -3,7 +3,7 @@
 # Copyright 2022 Endless OS Foundation, LLC
 # Copyright 2024 Collabora Ltd.
 #
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # Original author: Philip Withnall
 

@@ -1,6 +1,6 @@
 /* graphene-matrix.h: 4x4 matrix
  *
- * SPDX-License-Identifier: MIT
+ * SPDX-License-Identifier: GPL-3.0-or-later
  *
  * Copyright 2014  Emmanuele Bassi
  *

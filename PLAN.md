@@ -42,15 +42,32 @@ mostly deleting whole directories and adding two new backends (`gdk/qt`,
 
 ## Where the code lives
 
-- `gtk6/` — the combined toolkit (this directory).
+`pkgs/core/gtk6/` is a real CodeOS package (`manifest.json`, per-package
+`Makefile`, GPL-3.0-or-later).  glib lives **inside** the package.
+
+- `pkgs/core/gtk6/` — the combined toolkit (this directory).
   - `gtk/` — GTK4 widget layer, pruned.
   - `gsk/` — GSK core (render nodes) + new `qt` renderer.
   - `gdk/` — GDK core + new `qt` backend.
   - `qt/` — the Qt6-backed shims: `qgdk*.cpp`, `qgsk*.cpp`, `qgtext*.cpp`,
     `qgimage*.cpp`.
-  - `subprojects/` — `glib`, `graphene` sources (or wraps).
+  - `subprojects/glib/` — glib 2.90 source (built by `scripts/build-glib.sh`).
+  - `subprojects/graphene/` — graphene source.
+  - `toolchain/` — `cc`/`c++` driver wrappers (they drop the `-pthread` flag
+    meson's `threads` dependency injects, which bare-metal GCC rejects).
+  - `codeos-glib.cross.in` — glib cross-file template; `build-glib.sh`
+    substitutes the two checkout paths into `build/codeos-glib.cross`.
   - `Makefile` — freestanding build mirroring `qt6/panels/Makefile`.
-- Upstream GTK4 stays pristine at `../gtk4/` as the reference / patch base.
+- Top-level `make gtk6` / `gtk6-glib` / `gtk6-all` / `gtk6-check` build and
+  check the package.
+- Upstream GTK4 stays pristine at `gtk4/` (repo root) as the reference / patch
+  base.
+
+The CodeOS-native libc functions glib needs are part of **CodeOS**, not the
+package: `qt6/posixstubs/src/codeos_compat.c` (in `libcodeos_posixstubs`) now
+provides `iconv`, `posix_memalign`/`aligned_alloc`/`memalign`, `frexp`/`ldexp`,
+`statfs`/`statvfs` and the resolver/socket family.  The package carries no
+private libc.
 
 ## Phases
 
@@ -80,27 +97,33 @@ property/signal semantics.
 
 ### Phase 1 — substrate (glib): DONE (libraries build)
 
-`./scripts/build-glib.sh` configures glib 2.90.0 with
-`codeos-glib.cross` and produces, cleanly and reproducibly:
+`./scripts/build-glib.sh` configures glib 2.90.0 with the generated
+`build/codeos-glib.cross` and produces, cleanly and reproducibly:
 
-    build/glib/glib/libglib-2.0.a        (~12 MB,   1000+ T symbols)
-    build/glib/gobject/libgobject-2.0.a  (~6 MB,     GObject type system)
-    build/glib/gio/libgio-2.0.a          (~30 MB)
+    build/glib/glib/libglib-2.0.a        (~7 MB,    glib core + handlers)
+    build/glib/gobject/libgobject-2.0.a  (~2.3 MB,  GObject type system)
+    build/glib/gio/libgio-2.0.a          (~16 MB)
     build/glib/gmodule/libgmodule-2.0.a
     build/glib/gthread/libgthread-2.0.a
 
-What had to be bridged to get there (all in `deps/`, all weak so CodeOS can
-override later):
+The functions glib needs that a minimal freestanding libc does not have are
+**part of CodeOS now**, not a package-local shim.  `qt6/posixstubs/src/
+codeos_compat.c` adds them to `libcodeos_posixstubs.a`, so every consumer gets
+them and gtk6 links no private libc:
 
-| Gap | Resolution |
+| Gap | Resolution (in CodeOS) |
 |---|---|
-| meson needs `dependency('iconv')` | `deps/src/iconv_stub.c` (UTF-8 passthrough) + `libiconv.a`, linked in |
-| gnulib hard-requires linking `frexp`/`frexpl` | `deps/src/math_shim.c` (IEEE-754 bit-twiddling, no libm recursion) |
-| gio hard-requires `res_query` + `socket()` family | `deps/src/net_stub.c` |
-| glib `gmem.c` hard-errors without an aligned allocator | `deps/src/alloc_stub.c` (`posix_memalign`/`aligned_alloc`/`memalign` → malloc; matches `pkgs/core/openssl/src/ossl_shim.c`) |
-| gio picks `USE_STATFS`/`USE_STATVFS` from `statfs()` | `deps/src/fs_stub.c` |
-| `x86_64-elf-gcc` rejects `-pthread` (glib's `threads` dep) | `deps/bin/cc`, `deps/bin/c++` filter it out |
-| Compiler doesn't define `__linux__` but meson host is linux | `-D__linux__` in the cross file |
+| meson needs `dependency('iconv')` | real `iconv_open`/`iconv`/`iconv_close` (UTF-8/UTF-16/UTF-32/Latin-1/ASCII) |
+| gnulib hard-requires linking `frexp`/`frexpl` | `frexp`/`ldexp` via IEEE-754 bit twiddling (no libm recursion) |
+| gio hard-requires `res_query` + `socket()` family | weak resolver/socket stubs (no userspace network stack yet) |
+| glib `gmem.c` hard-errors without an aligned allocator | `posix_memalign`/`aligned_alloc`/`memalign` → malloc |
+| gio picks `USE_STATFS`/`USE_STATVFS` from `statfs()` | weak `statfs`/`statvfs` stubs |
+| `x86_64-elf-gcc` rejects `-pthread` (glib's `threads` dep) | `toolchain/cc`, `toolchain/c++` filter it out |
+| Compiler doesn't define `__linux__` but meson host is linux | `-D__linux__` in the cross-file template |
+
+The network/statfs entry points are `weak` on purpose: a future real
+implementation linked from the kernel or a NIC package overrides them without
+touching `codeos_compat.c`.
 
 Deliberately **not** built: glib's installed CLI tools (`gtester`,
 `gobject-query`, `gdbus`, `gsettings`, …). They are host programs and link the
@@ -111,11 +134,12 @@ generates into `build/glib/gobject/`.
 
 ### Remaining substrate work
 
-1. **Target pcre2 + libffi + zlib.** meson currently resolves these against the
-   *host* system (`libpcre2-8.so`, `libffi.so`, `zlib`). gio/gobject reference
-   their symbols, so the final link needs target builds: reuse Qt6's
-   `libQt6BundledPcre2.a`/`libQt6BundledZLIB.a` and build libffi from glib's
-   `libffi.wrap`, or `--wrap-mode=forcefallback`.
+1. ~~**Target pcre2 + libffi + zlib.**~~ **DONE.** `build-glib.sh` passes
+   `--wrap-mode=forcefallback` and builds the three bundled subprojects for the
+   CodeOS target alongside glib:
+   `subprojects/pcre2-10.46/libpcre2-8.a`,
+   `subprojects/libffi-3.5.2/src/libffi.a`, `subprojects/zlib-1.3.1/libz.a`.
+   Nothing is taken from the host.
 2. **Install glib into a `gtk6/sysroot`.** GTK's build needs
    `glib-2.0.pc`/`gobject-2.0.pc`/`gio-2.0.pc` + headers. Add an install step that
    stages headers/`.pc` files so meson can find glib as a target dependency.
@@ -157,6 +181,8 @@ Not yet wired up:
   (`G_DEFINE_TYPE`d `GdkQt*`/`GskQt*`) once the sources are imported and
   pruned; until then the modules are standalone and freestanding-verified by
   `tests/linkcheck.cpp`.
-* glib 2.90 still resolves pcre2/libffi/zlib against the host (see above).
+* glib 2.90's pcre2/libffi/zlib now build for the CodeOS target from the forced
+  subprojects (see "Remaining substrate work"); they are not yet linked into
+  the kernel image.
 * `sysroot/` is staged but not tracked; see ".gitignore".
 

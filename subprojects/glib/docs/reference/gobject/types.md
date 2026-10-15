@@ -1,5 +1,5 @@
 Title: Types
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2001, 2003 Owen Taylor
 SPDX-FileCopyrightText: 2002, 2003, 2004, 2005 Matthias Clasen
 SPDX-FileCopyrightText: 2003, 2006 Josh Parsons

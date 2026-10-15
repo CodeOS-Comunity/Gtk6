@@ -1,5 +1,5 @@
 Title: File Attributes
-SPDX-License-Identifier: LGPL-2.1-or-later
+SPDX-License-Identifier: GPL-3.0-or-later
 SPDX-FileCopyrightText: 2007 Andrew Walton
 SPDX-FileCopyrightText: 2007 Alexander Larsson
 SPDX-FileCopyrightText: 2008, 2014 Matthias Clasen

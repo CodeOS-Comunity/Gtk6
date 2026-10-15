@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: LGPL-2.1-or-later
+# SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2017 Patrick Griffis
 # SPDX-FileCopyrightText: 2017 Danny Forghieri
 # SPDX-FileCopyrightText: 2017 Nirbheek Chauhan

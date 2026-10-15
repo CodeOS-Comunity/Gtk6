@@ -1,7 +1,5 @@
 # Build outputs
 build/
-deps/lib/
-deps/src/*.o
 tests/*.o
 tests/*.d
 
@@ -13,3 +11,4 @@ sysroot/
 subprojects/glib/subprojects/packagecache/
 subprojects/glib/subprojects/proxy-libintl-0.5/
 subprojects/glib/subprojects/.wraplock
+subprojects/graphene/subprojects/.wraplock

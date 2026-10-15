@@ -1,6 +1,6 @@
 project('graphene', 'c',
         version: '1.11.1',
-        license: 'MIT',
+        license: 'GPL-3.0-or-later',
         meson_version: '>= 0.55.3',
         default_options: [
           'buildtype=debugoptimized',
